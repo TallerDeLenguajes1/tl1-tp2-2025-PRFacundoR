@@ -16,9 +16,9 @@ int main()
         for (j = 0; j < M; j++)
         {
             mt[i][j] = 1 + rand() % 100;
-            printf("%lf ", mt[i][j]);
+            printf("%d ", *(*(mt+i)+j));
         }
         printf("\n");
-        return 0;
     }
+    return 0;
 }
