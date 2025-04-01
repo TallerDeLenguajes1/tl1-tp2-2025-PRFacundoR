@@ -1,0 +1,3 @@
+2F. No puedo ver el archivo ya que esta en otra rama.
+-Lugo de agregar respuestas.txt veo que en cierto punto anterior salio una rama que se dirigia a un archivo en otra version.
+-Al hacer merge la rama de la otra version se unio a la linea principal.
