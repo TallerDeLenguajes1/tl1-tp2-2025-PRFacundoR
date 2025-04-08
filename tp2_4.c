@@ -15,6 +15,25 @@ struct {
    }typedef compu;
 
 
+
+   void listarPCs(compu *pcs, int cantidad){
+
+    for (int i = 0; i < C; i++)
+    {
+        printf("La velocidad de procesamiento es %d\n", pcs[i].velocidad);
+        printf("El anio de fabricacion es %d\n", pcs[i].anio);
+        printf("La cantidad de nucleos es %d\n", pcs[i].cantidad_nucleos);
+        printf("El tipo de cpu es " );
+        
+        puts(pcs[i].tipo_cpu);
+        printf("\n");
+
+    }
+    
+
+   }
+
+
 int main()
 {
     compu *compus=(compu* )malloc(C*sizeof(compu));
@@ -56,6 +75,8 @@ int main()
         
 
     }
+
+    listarPCs(compus, C);
     
     for (int i = 0; i < C; i++)
     {
