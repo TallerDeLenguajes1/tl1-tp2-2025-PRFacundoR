@@ -16,7 +16,7 @@ struct {
 
 
 
-   void listarPCs(compu *pcs, int cantidad){
+   void listarPCs(compu *pcs){
 
     for (int i = 0; i < C; i++)
     {
@@ -30,6 +30,33 @@ struct {
 
     }
     
+
+   }
+
+
+   void mostrarMasVieja(compu *pcs){
+
+    int aux=3000;
+    int j=0;
+    for ( int i=0; i < C; i++)
+    {
+       
+        
+        if (pcs[i].anio<aux)
+        {
+            aux=pcs[i].anio;
+            j=i;
+        }
+    
+    }
+    
+        printf("La velocidad de procesamiento es %d\n", pcs[j].velocidad);
+        printf("El anio de fabricacion es %d\n", aux);
+        printf("La cantidad de nucleos es %d\n", pcs[j].cantidad_nucleos);
+        printf("El tipo de cpu es ");
+        puts(pcs[j].tipo_cpu);
+        printf("\n");
+
 
    }
 
@@ -54,14 +81,7 @@ int main()
 
         pos=rand()%(N);
         
-          strcpy(compus[i].tipo_cpu,tipos[pos]);
-            
-        
-        
-           
-        
-        
-        
+          strcpy(compus[i].tipo_cpu,tipos[pos]);  
         
         /*for (int j = 0; j < N; j++)
         {
@@ -75,8 +95,11 @@ int main()
         
 
     }
+    printf("Lista de PCs\n");
+    listarPCs(compus);
 
-    listarPCs(compus, C);
+    printf("La PC mas vieja\n");
+    mostrarMasVieja(compus);
     
     for (int i = 0; i < C; i++)
     {
