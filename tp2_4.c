@@ -60,6 +60,29 @@ struct {
 
    }
 
+   void mostrarMasVeloz(compu *pcs){
+    int aux=0;
+    int j=0;
+    for ( int i=0; i < C; i++)
+    {
+       
+        
+        if (pcs[i].velocidad>aux)
+        {
+            aux=pcs[i].velocidad;
+            j=i;
+        }
+    
+    }
+    
+        printf("La velocidad de procesamiento es %d\n", aux);
+        printf("El anio de fabricacion es %d\n", pcs[j].anio);
+        printf("La cantidad de nucleos es %d\n", pcs[j].cantidad_nucleos);
+        printf("El tipo de cpu es ");
+        puts(pcs[j].tipo_cpu);
+        printf("\n");
+   }
+
 
 int main()
 {
@@ -100,6 +123,8 @@ int main()
 
     printf("La PC mas vieja\n");
     mostrarMasVieja(compus);
+    printf("La PC mas rapida\n");
+    mostrarMasVeloz(compus);
     
     for (int i = 0; i < C; i++)
     {
