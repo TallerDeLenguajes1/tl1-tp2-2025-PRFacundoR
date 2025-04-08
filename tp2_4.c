@@ -33,15 +33,11 @@ int main()
         
         compus[i].tipo_cpu=(char*)malloc(M*sizeof(char));
 
-        pos=rand()%(5+1);
-        int z=0;
-        while (tipos[pos][z]!='\0')
-        {
-            int j=0;
-          strcpy(compus[i].tipo_cpu[j],tipos);
-            j++;
-            z++;
-        }
+        pos=rand()%(N);
+        
+          strcpy(compus[i].tipo_cpu,tipos[pos]);
+            
+        
         
            
         
@@ -61,7 +57,11 @@ int main()
 
     }
     
-
+    for (int i = 0; i < C; i++)
+    {
+        free(compus[i].tipo_cpu);
+    }
+    free(compus);
 
     
     
