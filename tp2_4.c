@@ -86,7 +86,7 @@ struct {
 
 int main()
 {
-    compu *compus=(compu* )malloc(C*sizeof(compu));
+    compu compus[C];
     char tipos[N][M] = {"Intel", "AMD", "Celeron", "Athlon", "Core",
         "Pentium"};
 
